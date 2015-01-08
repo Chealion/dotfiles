@@ -1,0 +1,28 @@
+[user]
+    name = Micheal Jones
+    email = micheal@mcjones.ca
+
+[core]
+    excludesfile = "/Users/micheal.jones/.gitignore"
+    filemode = false
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+
+[branch "master"]
+    mergeoptions = --no-ff
+
+[merge]
+    log = true
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    df = diff
+    lg = log -p
+    pullr = pull -rebase
+[push]
+    default = simple
