@@ -1,10 +1,14 @@
 [user]
-    name = Micheal Jones
-    email = micheal@mcjones.ca
+	name = Micheal Jones
+	email = micheal@mcjones.ca
 
 [core]
-    excludesfile = "/Users/micheal.jones/.gitignore"
+    excludesfile = "/Users/micheal/.gitignore"
     filemode = false
+
+[pull]
+    rebase = true
+
 [color]
     ui = auto
     diff = auto
@@ -12,17 +16,38 @@
     branch = auto
     interactive = auto
 
+[branch]
+    autosetuprebase = always
+
 [branch "master"]
     mergeoptions = --no-ff
 
+[branch]
+    mergeoptions = --no-ff
+    autosetuprebase = always
+
 [merge]
     log = true
+    tool = fugitive
+
+[mergetool "fugitive"]
+    cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+
 [alias]
     st = status
     ci = commit
     co = checkout
     df = diff
-    lg = log -p
-    pullr = pull -rebase
+    #lg = log -p
+    br = branch
+    p = pull --rebase --ff-only
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --name-only
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+
 [push]
-    default = simple
+    default=simple
+[status]
+	submoduleSummary = true
