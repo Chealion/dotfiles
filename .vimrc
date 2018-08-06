@@ -1,8 +1,9 @@
+
 execute pathogen#infect()
 filetype plugin indent on
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 set noswapfile
@@ -20,6 +21,8 @@ set softtabstop=2
 set expandtab
 set smarttab
 set relativenumber
+set modeline
+set tw=78
 
 set number
 set numberwidth=4
@@ -33,6 +36,7 @@ set backspace=indent,eol,start
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd FileType gitcommit setlocal spell
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 inoremap jj <ESC>
 

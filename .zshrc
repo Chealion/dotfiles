@@ -74,15 +74,11 @@ alias noval='nova list --fields name,status,power_state,networks,metadata'
 #Tools
 alias ffmpegrewrap='/usr/local/bin/ffmpeg -i "$1" -acodec pcm_s16le -vcodec copy "$2".mov'
 
-#Pomodor
-alias pstart='pomodoro start'
-alias pclear='pomodoro clear'
-alias pstatus='pomodoro status'
-
+alias fuckyousandcloud='source ~/openstack_rcs/sandcloud/sandcloud.sh; nova reboot --hard oncall;'
 
 # functions
 quick14() { nova boot --image "Ubuntu 14.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll }
-quick16() { nova boot --image 3ec4424e-17d8-4e45-b0cf-9bdc5a2b7fa7 --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
+quick16() { nova boot --image "Ubuntu 16.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
 nsh() { nova ssh --address-type fixed --ipv6 --login ubuntu "$1" }
 mdc() { mkdir -p "$1" && cd "$1" }
 setenv() { export $1=$2 }  # csh compatibility
@@ -124,6 +120,13 @@ function undock() {
   unset DOCKER_TLS_VERIFY
   unset DOCKER_CERT_PATH
 }
+
+function oscurl() {
+  token=$(openstack token issue -c id -f value)
+  curl -s -H "X-Auth-Token:$token" $1
+}
+
+function os_clean { unset OS_AUTH_URL OS_TENANT_NAME OS_USERNAME OS_PASSWORD OS_REGION_NAME OS_PROJECT_NAME OS_PROJECT_DOMAIN_NAME OS_USER_DOMAIN_NAME OS_IDENTITY_AI_VERSION; }
 
 #Login Information To Write
 if [[ $TERM == "xterm-color" ]]; then
