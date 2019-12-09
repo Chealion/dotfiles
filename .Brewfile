@@ -1,10 +1,8 @@
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'homebrew/versions'
 
 brew 'ansible'
 brew 'git'
@@ -35,7 +33,6 @@ cask 'changes'
 cask 'cocoarestclient'
 cask 'cyberduck'
 cask 'docker'
-cask 'dropbox'
 cask 'fantastical'
 cask 'firefox'
 cask 'geekbench'
@@ -74,7 +71,6 @@ cask 'font-source-sans-pro'
 
 mas '2Do', id: 477670270
 mas 'Bear', id: 1091189122
-mas 'Day One', id: 1055511498
 mas 'GIF Brewery 3', id: 1081413713
 mas 'Keystone', id: 409183694
 mas 'Magnet', id: 441258766
