@@ -72,7 +72,7 @@ mas 'Bear', id: 1091189122
 mas 'GIF Brewery 3', id: 1081413713
 mas 'Keystone', id: 409183694
 mas 'Magnet', id: 441258766
-mas 'Microsoft Remote Desktop', id: 715768417
+mas 'Microsoft Remote Desktop 10', id: 1295203466
 mas 'Numbers', id: 361304891
 mas 'Pages', id: 361309726
 mas 'Reeder', id: 880001334
