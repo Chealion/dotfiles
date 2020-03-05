@@ -25,12 +25,9 @@ brew 'wget'
 brew 'youtube-dl'
 
 cask '1password'
-cask 'adobe-creative-cloud'
 cask 'aerial'
 cask 'banktivity'
 cask 'carbon-copy-cloner'
-cask 'changes'
-cask 'cocoarestclient'
 cask 'cyberduck'
 cask 'docker'
 cask 'fantastical'
@@ -59,15 +56,16 @@ cask 'soulver'
 cask 'sourcetree'
 cask 'steam'
 cask 'suspicious-package'
-cask 'transmission'
 cask 'tunnelblick'
 cask 'vlc'
+cask 'visual-studio-code'
 cask 'wireshark'
 cask 'zoomus'
 
 # Fonts
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
+cask 'font-lato'
 
 mas '2Do', id: 477670270
 mas 'Bear', id: 1091189122
@@ -75,6 +73,8 @@ mas 'GIF Brewery 3', id: 1081413713
 mas 'Keystone', id: 409183694
 mas 'Magnet', id: 441258766
 mas 'Microsoft Remote Desktop', id: 715768417
+mas 'Numbers', id: 361304891
+mas 'Pages', id: 361309726
 mas 'Reeder', id: 880001334
 mas 'Remote Desktop', id: 409907375
 mas 'Textual', id: 1262957439
