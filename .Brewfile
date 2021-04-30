@@ -26,7 +26,6 @@ brew 'youtube-dl'
 
 cask '1password'
 cask 'aerial'
-cask 'banktivity'
 cask 'carbon-copy-cloner'
 cask 'cyberduck'
 cask 'docker'
@@ -67,7 +66,7 @@ cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-lato'
 
-mas '2Do', id: 477670270
+#mas '2Do', id: 477670270
 mas 'Bear', id: 1091189122
 mas 'GIF Brewery 3', id: 1081413713
 mas 'Keystone', id: 409183694
