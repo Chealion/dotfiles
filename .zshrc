@@ -13,40 +13,13 @@ PAGER="less"
 
 #macOS Sierra Hack to add keys using Keychain stored password
 if [[ $(ssh-add -l | wc -l) -ne 3 ]]; then
-  ssh-add -K
-  ssh-add -K ~/.ssh/cyberaMenlo
-  ssh-add -K ~/.ssh/mcjones_25519
+  ssh-add --apple-use-keychain
+  ssh-add --apple-use-keychain ~/.ssh/cyberaMenlo
+  ssh-add --apple-use-keychain ~/.ssh/mcjones_25519
 fi  
 
 #Prompt
 export PS1='micheal@%~ %# '
-
-#function title() {
-  # escape '%' chars in $1, make nonprintables visible
-#  a=${(V)1//\%/\%\%}
-
-  # Truncate command, and join lines.
-#  a=$(print -Pn "%40>...>$a" | tr -d "\n")
-
-#  case $TERM in
-#  screen)
-#    print -Pn "\ek$a:$3\e\\"      # screen title (in ^A")
-#    ;;
-#  xterm*|rxvt)
-#    print -Pn "\e]2;$2 | $a:$3\a" # plain xterm title
-#    ;;
-#  esac
-#}
-
-# precmd is called just before the prompt is printed
-#function precmd() {
-#  title "zsh" "$USER@%m" "%55<...<%~"
-#}
-
-# preexec is called just before any command line is executed
-#function preexec() {
-#  title "$1" "$USER@%m" "%35<...<%~"
-#}
 
 # colorful listings
 zmodload -i zsh/complist
@@ -74,13 +47,10 @@ alias noval='nova list --fields name,status,power_state,networks,metadata'
 #Tools
 alias ffmpegrewrap='/usr/local/bin/ffmpeg -i "$1" -acodec pcm_s16le -vcodec copy "$2".mov'
 
-alias fuckyousandcloud='source ~/openstack_rcs/sandcloud/sandcloud.sh; nova reboot --hard oncall;'
-
 # functions
-quick14() { nova boot --image "Ubuntu 14.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll }
 quick16() { nova boot --image "Ubuntu 16.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
-nsh() { nova ssh --address-type fixed --ipv6 --login ubuntu "$1" }
-mdc() { mkdir -p "$1" && cd "$1" }
+quick18() { nova boot --image "Ubuntu 18.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
+quick20() { nova boot --image "Ubuntu 20.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
 setenv() { export $1=$2 }  # csh compatibility
 sdate() { date +%Y.%m.%d }
 pc() { awk "{print \$$1}" }
