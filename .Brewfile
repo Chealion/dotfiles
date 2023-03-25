@@ -5,6 +5,8 @@ tap 'homebrew/core'
 tap 'homebrew/services'
 
 brew 'ansible'
+brew 'ffmpeg'
+brew 'flyctl'
 brew 'git'
 brew 'git-review'
 brew 'git-crypt'
@@ -12,13 +14,14 @@ brew 'go'
 brew 'httpie'
 brew 'hugo'
 brew 'iperf'
+brew 'jq'
+brew 'kubernetes-cli'
 brew 'mas'
 brew 'nmap'
 brew 'python'
-brew 'python3'
 brew 'rclone'
-brew 'sshuttle'
-brew 'svn'`
+brew 'sqlite'
+brew 'terraform'
 brew 'tmux'
 brew 'vim'
 brew 'watch'
@@ -26,14 +29,15 @@ brew 'wget'
 brew 'youtube-dl'
 
 cask '1password'
+cask '1password-cli'
 cask 'aerial'
+cask 'calibre'
 cask 'carbon-copy-cloner'
 cask 'cyberduck'
 cask 'docker'
 cask 'fantastical'
 cask 'firefox'
 cask 'geekbench'
-cask 'gfxcardstatus'
 cask 'google-chrome'
 cask 'handbrake'
 cask 'imageoptim'
@@ -67,8 +71,10 @@ cask 'zoomus'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-lato'
+cask 'font-sf-mono'
+cask 'font-sf-pro'
 
-#mas '2Do', id: 477670270
+mas '2Do', id: 477670270
 mas 'Bear', id: 1091189122
 mas 'GIF Brewery 3', id: 1081413713
 mas 'Keystone', id: 409183694
@@ -79,7 +85,4 @@ mas 'Pages', id: 361309726
 mas 'Reeder', id: 880001334
 mas 'Remote Desktop', id: 409907375
 mas 'Textual', id: 1262957439
-mas 'ToothFairy', id: 1191449274
-mas 'Tweetbot 3 for Twitter', id: 1384080005
 mas 'WiFi Explorer', id: 494803304
-mas 'Xcode', id: 497799835
