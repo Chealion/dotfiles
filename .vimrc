@@ -4,6 +4,7 @@ filetype plugin indent on
 
 syntax enable
 set background=light
+let g:solarized_contrast = "normal"
 colorscheme solarized
 
 set noswapfile

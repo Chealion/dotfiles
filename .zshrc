@@ -3,7 +3,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=1000
 setopt appendhistory inc_append_history share_history hist_ignore_dups extended_history autocd extendedglob
-export PATH=$PATH:~/Documents/go/bin:/usr/libexec
+export PATH=~/Documents/go/bin:/usr/libexec:/opt/homebrew/bin:$PATH
 
 export GOPATH=~/Documents/go
 
@@ -38,9 +38,11 @@ alias mkdir='nocorrect mkdir'
 alias lsa="ls -laFh"
 alias cd..='cd ..'
 alias ..='cd ..'
-alias tsl="tail -f /var/log/syslog"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 #Work aliases
+alias pip='pip3'
+alias python='python3'
 alias ip2="curl -6 icanhazip.com; curl -4 icanhazip.com"
 alias noval='nova list --fields name,status,power_state,networks,metadata'
 
@@ -48,13 +50,11 @@ alias noval='nova list --fields name,status,power_state,networks,metadata'
 alias ffmpegrewrap='/usr/local/bin/ffmpeg -i "$1" -acodec pcm_s16le -vcodec copy "$2".mov'
 
 # functions
-quick16() { nova boot --image "Ubuntu 16.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
 quick18() { nova boot --image "Ubuntu 18.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
 quick20() { nova boot --image "Ubuntu 20.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
-setenv() { export $1=$2 }  # csh compatibility
+quick22() { nova boot --image "22.04" --flavor m1.small --key-name cyberaMenlo "$1" --poll; nova show "$1" | grep metadata}
 sdate() { date +%Y.%m.%d }
 pc() { awk "{print \$$1}" }
-rot13 () { tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]" }
 
 function memh() {
     top -n 5 -o rprvt -l1 -stats pid,command,rprvt | tail -n 5;
