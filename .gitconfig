@@ -9,14 +9,24 @@
 [pull]
   rebase = true
 
+[protocol "http"]
+  allow = never
+
+[protocol "git"]
+  allow = never
+
 [fetch]
-  #fsckobjects = true
+  fsckObjects = true
+
+[fetch "fsck"]
+  zeroPaddedFilemode = ignore
+  badTimezone = ignore
 
 [transfer]
-  #fsckobjects = true
+  fsckObjects = true
 
 [receive]
-  #fsckobjects = true
+  fsckObjects = true
 
 [color]
   ui = auto
@@ -71,9 +81,5 @@
 [credential]
   helper = osxkeychain
 
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+[init]
+  defaultBranch = main
