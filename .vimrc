@@ -3,9 +3,8 @@ execute pathogen#infect()
 filetype plugin indent on
 
 syntax enable
-set background=light
-let g:solarized_contrast = "normal"
-colorscheme solarized
+set background=dark
+colorscheme toast
 
 set noswapfile
 set nocompatible
@@ -15,6 +14,7 @@ set ruler
 set incsearch
 set hlsearch
 set mouse=a
+set pastetoggle=<F2>
 
 set tabstop=2
 set shiftwidth=2
