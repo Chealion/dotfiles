@@ -55,7 +55,6 @@ brew 'watch'
 brew 'wget'
 brew 'wireguard-tools'
 brew 'yamllint'
-brew 'youtube-dl'
 brew 'yq'
 brew 'yt-dlp'
 
