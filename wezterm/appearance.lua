@@ -17,7 +17,10 @@ function module.is_dark()
     -- Some systems report appearance like "Dark High Contrast"
     -- so let's just look for the string "Dark" and if we find
     -- it assume appearance is dark.
-    return wezterm.gui.get_appearance():find("Dark")
+
+    -- DISABLING DARK TOGGLE
+    --return wezterm.gui.get_appearance():find("Dark")
+    return true
   end
   return true
 end

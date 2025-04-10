@@ -9,12 +9,12 @@ local appearance = require 'appearance'
 -- COLOUR SCHEME
 ------------------
 if appearance.is_dark() then
-  wezterm.log_info("Dark")
-  config.color_scheme = 'Gruvbox dark, soft (base16)'
+  --config.color_scheme = 'Gruvbox dark, hard (base16)'
+  config.color_scheme = 'GruvboxDarkHard'
 	local tab_bg = '#fff'
 else
-  wezterm.log_info("Light")
-  config.color_scheme = 'Gruvbox light, soft (base16)'
+  --config.color_scheme = 'Gruvbox light, hard (base16)'
+  config.color_scheme = 'GruvboxLightHard'
 	local tab_bg = '#fff'
 end
 
