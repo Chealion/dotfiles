@@ -16,6 +16,7 @@ brew 'atuin'
 brew 'awscli'
 brew 'cilium-cli'
 brew 'crane'
+brew 'fd'
 brew 'ffmpeg'
 brew 'flyctl'
 brew 'gh'
@@ -37,7 +38,6 @@ brew 'kubeshark'
 brew 'kustomize'
 brew 'mas'
 brew 'mtr'
-brew 'neovim'
 brew 'nmap'
 brew 'pdfgrep'
 brew 'python'
@@ -83,7 +83,6 @@ cask 'sourcetree'
 cask 'steam'
 cask 'suspicious-package'
 cask 'tunnelblick'
-cask 'visual-studio-code'
 cask 'vlc'
 cask 'wezterm'
 cask 'wireshark'
@@ -109,9 +108,5 @@ mas '1Blocker', id: 1365531024
 mas '1Password for Safari', id: 1569813296
 mas 'Bear', id: 1091189122
 mas 'GIF Brewery 3', id: 1081413713
-mas 'Ivory', id: 6444602274
-mas 'Keystone', id: 409183695
-mas 'Numbers', id: 361304891
-mas 'Pages', id: 361309726
 mas 'Tailscale', id: 1475387142
 mas 'WiFi Explorer', id: 494803304

@@ -23,6 +23,7 @@ end
 ---------
 config.audible_bell = 'Disabled'
 --config.show_close_tab_button_in_tabs = false
+config.window_close_confirmation = 'NeverPrompt'
 
 --------------------
 -- FONT AND WINDOW
